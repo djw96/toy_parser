@@ -5,11 +5,13 @@ enum toy_type{TOY_COMMENTS,TOY_KEYWORD,TOY_IDENTIFIER,
 						TOY_OPERATOR,TOY_DELIMITER, TOY_NUMBER};
 
 enum {
-	PARSE_INVALID_VALUE,
-	PARSE_OK
+	PARSE_OK,
+	PARSE_INVALID_VALUE
 };
 struct toy_value {
-	string str;
+	std::string str;
 	toy_type type;
+	int row = -1;
+	int column = -1;
 };
 #endif
