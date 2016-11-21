@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4FBFE295-CDF7-45D0-81BD-7EB3ADC744C0}</ProjectGuid>
+    <ProjectGuid>{B368A92D-C224-4281-B7F3-D3D5E31BB555}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Test</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -146,12 +146,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ToyParser\ToyParser.vcxproj">
-      <Project>{48bf54e3-a0ed-45b7-b1b4-4dfd2783b123}</Project>
-    </ProjectReference>
+    <ClCompile Include="..\ToyParser\toy_parser.cpp" />
+    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

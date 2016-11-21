@@ -17,9 +17,13 @@ int parse_keyword(const char *str, const char *k,toy_value *v) {
 		return PARSE_OK;
 }
 
-int main()
+int parse_value(const char *str, toy_value *v)
 {
-	toy_value v = toy_value();
-	cout << parse_keyword("else", "else", &v) << endl;
-	cout << parse_keyword("els", "else", &v) << endl;
+	switch (str[0])
+	{
+	case'e':
+		return parse_keyword(str, "else", v);
+	default:
+		return PARSE_INVALID_VALUE;
+	}
 }

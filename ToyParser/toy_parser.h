@@ -14,4 +14,6 @@ struct toy_value {
 	int row = -1;
 	int column = -1;
 };
+int parse_value(const char *str, toy_value *v);
+
 #endif
