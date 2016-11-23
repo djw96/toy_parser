@@ -13,6 +13,10 @@ do{\
 int main()
 {
 	toy_value v;
-	TEST(PARSE_OK, parse_value("else",&v));
-	TEST(PARSE_INVALID_VALUE, parse_value("avb", &v));
+	TEST(PARSE_INVALID_VALUE, parse("el*se1", &v));
+	TEST(PARSE_OK, parse("what", &v));
+	TEST(PARSE_OK, parse("then", &v));
+	TEST(PARSE_OK, parse("while", &v));
+	TEST(PARSE_OK, parse("if",&v));
+	TEST(PARSE_INVALID_VALUE, parse("i*vb", &v));
 }

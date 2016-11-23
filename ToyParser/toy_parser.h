@@ -10,10 +10,10 @@ enum {
 };
 struct toy_value {
 	std::string str;
-	toy_type type;
+	toy_type type=TOY_COMMENTS;
 	int row = -1;
 	int column = -1;
 };
-int parse_value(const char *str, toy_value *v);
+int parse(const char *str, toy_value *v);
 
 #endif
