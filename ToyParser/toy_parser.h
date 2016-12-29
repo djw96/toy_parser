@@ -22,12 +22,13 @@ struct toy_token {
 };
 
 struct toy_line {
-	typedef shared_ptr<toy_line> Ptr;
-	typedef vector<Ptr> List;
-	toy_token::List tokens;
+//	typedef shared_ptr<toy_line> Ptr;
+//	typedef vector<Ptr> List;
+//	toy_token::List tokens;
+	vector<toy_token> tokens;
 };
 struct toy_file {
-
+	vector<toy_line> lines;
 };
 //int parse(const char *str, toy_token *v);
 
